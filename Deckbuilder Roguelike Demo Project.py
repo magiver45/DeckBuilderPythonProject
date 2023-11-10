@@ -138,21 +138,22 @@ class GameLogic():
         enemy  = self.new_enemy()
 
         # Resetting and setting up the Game
-        self.player_name   = player.character_name
-        self.player_hp     = player.character_hp
-        self.player_max_hp = player.character_max_hp
-        self.player_energy = player.character_energy
-        self.player_block  = player.character_defense
+        self.player_name    = player.character_name
+        self.player_hp      = player.character_hp
+        self.player_max_hp  = player.character_max_hp
+        self.player_energy  = player.character_energy
+        self.player_block   = player.character_defense
         # Player's Cards
-        self.player_deck      = list(player.character_deck)
-        self.player_hand      = []
-        self.player_discard   = []
+        self.player_deck    = list(player.character_deck)
+        self.player_hand    = []
+        self.player_discard = []
         
-        self.enemy_name   = enemy.enemy_name
-        self.enemy_hp     = enemy.enemy_hp
-        self.enemy_max_hp = enemy.enemy_max_hp
-        self.enemy_block  = enemy.enemy_defense
-        self.enemy_move   = random.choice(enemy.enemy_moves)
+        self.enemy_creature = enemy
+        self.enemy_name     = enemy.enemy_name
+        self.enemy_hp       = enemy.enemy_hp
+        self.enemy_max_hp   = enemy.enemy_max_hp
+        self.enemy_block    = enemy.enemy_defense
+        self.enemy_move     = random.choice(enemy.enemy_moves)
 
         self.shuffle_deck()
         self.starting_hand()
